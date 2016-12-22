@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 '''
 Telemetry decoder for FITSAT1 437MHz CW downlink
 Author: Kay(github.com/kayhe)
