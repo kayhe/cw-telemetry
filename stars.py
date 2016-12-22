@@ -45,23 +45,7 @@ def m3decode(data):
     check(data)
     data = convert(data)
     rssi = (data[0] * 16 + data[1])/2.0
-    print "RSSI[V] = ", rssi
-    if(rssi in [0.35,0.4,0.5]):
-        print "RSSI[db micro] = -20"
-    elif(rssi in [0.55,0.65,0.75]):
-        print "RSSI[db micro = -10"
-    elif(rssi in [0.85,0.95,1.1]):
-        print "RSSI[db micro] = 0"
-    elif(rssi in [1.2,1.3,1.4]):
-        print "RSSI[db micro] = 10"
-    elif(rssi in [1.5,1.6,1.7]):
-        print "RSSI[db micro] = 20"
-    elif(rssi in [1.8,1.9,1.95]):
-        print "RSSI[db micro] = 30"
-    elif(rssi in [2.05,2.1,2.15]):
-        print "RSSI[db micro] = 40"
-    elif(rssi == 2.15):
-        print "RSSI[db micro] = 50"
+    print "RSSI = ", rssi
     temp1 = data[2] * 16 + data[3]
     print "Temperature 1[degC] = ", temperature(temp1)
     temp2 = data[4] * 16 + data[5]
